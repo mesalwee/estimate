@@ -2,37 +2,56 @@
 <html>
     <head>
         <title>Estimate</title>
+        <meta charset="utf-8">
         <link rel='stylesheet' type='text/css' href="estimate.css"/>
+        <script src="jquery-2.0.3.min.js"></script>
+        <script src="estimate.js"></script>
     </head>
     <body>
-        <h1>Estimate</h1>
-        <div id="estimate_info">
-            <ul>
-                <li>Estimate No.</li>
-                <li>Date: 11/22/2013</li>
-            </ul>
+        <div id="navbar">
+            <div id="container">
+                <!-- Nav Menu Items -->
+                <div id="nav_container">
+                    <button class="nav_button">Create New</button>
+                </div>
+                <!-- End Nav Menu Items -->
+                
+                <!-- Login -->
+                <div id="login_container">
+                    <a href="#" id="login_button"><span>Login</span><em></em></a>
+                    <div style="clear:both"></div>
+                    <div id="login_box">
+                        <form id="login_form">
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="username">User Name</label>
+                                    <input type="text" name="username" id="username"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password"/>
+                                </fieldset>
+                                <label for="checkbox"><input type="checkbox" id="checkbox"/>Remember Me</label> 
+                                <input type="submit" id="login" value="Sign In"/>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Login-->
+            </div>
         </div>
-        <br />
-        <div id="customer_info">
-           <form>
-               To: <input type="text" name="companyname"><br />
-               Street Address: <input type="text" name="streetaddress"><br />
-               City: <input type="text" name="city">
-               State: <input type="text" name="state">
-               Zip: <input type="text" name="zip"><br />
-            </form>
-        </div>
-        <br />
+        <!-- Create New -->
         <div>
-            <form>
-                PO#: <input type="text" name="ponumber">
-                Unit#: <input type="text" name="unitnumber">
-                Size: <input type="text" name="unitsize">
-                Order By: <input type="text" name="orderby">
-                Project <input type="radio" name="projectjob">
-                Job <input type="radio" name="projectjob">
+            <!-- Customer info-->
+            <form id="customer_estimate">
+                <fieldset>
+                    <label>Customer: Job</label>
+                    <input type="text"/>
+                </fieldset>
             </form>
+            <!-- Estimate info-->
+            <p>Date: <input type="text" id="datepicker"></p>
         </div>
-        
+        <!-- End Create New -->
     </body>
 </html>
